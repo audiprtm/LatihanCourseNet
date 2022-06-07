@@ -4,6 +4,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class Sicepat extends Shipper implements ShipperInterface{
+	//Ngoding hari ke 2
+	
 	public Sicepat() {
 		namaShipper = "Sicepat";
 	}

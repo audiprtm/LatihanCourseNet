@@ -3,6 +3,8 @@ package com.coursenet.latihan.service;
 import com.coursenet.latihan.domain.Paket;
 
 public class Shipper {
+	//Ngoding hari ke 3
+	
 	private int flagKirim;
 	protected String namaShipper;
 	

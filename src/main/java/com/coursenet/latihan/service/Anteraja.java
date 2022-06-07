@@ -4,6 +4,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class Anteraja extends Shipper implements ShipperInterface {
+	//NGoding seharian
+	
 	public Anteraja() {
 		namaShipper = "Anteraja";
 	}
