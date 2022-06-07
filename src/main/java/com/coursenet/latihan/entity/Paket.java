@@ -26,6 +26,7 @@ public class Paket {
 	
 	private String namaBarang;
 	
+	//fitur c
 	@CreationTimestamp
 	private LocalDateTime createdAt;
 	
