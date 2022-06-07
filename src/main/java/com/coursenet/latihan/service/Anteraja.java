@@ -8,6 +8,8 @@ public class Anteraja extends Shipper implements ShipperInterface {
 		namaShipper = "Anteraja";
 	}
 	
+	
+	//lagi ngoding fitur
 //	private static Anteraja anteraja;
 //	
 //	public static Anteraja getInstance() {

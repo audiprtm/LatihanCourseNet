@@ -18,6 +18,7 @@ public class PaketController {
 	
 	@PostMapping("/hello")
 	public String sayHello(@RequestBody HelloRequestDTO helloRequest) {
+		//lagi ngoding fitur
 		return "Halo "+ helloRequest.getNama();
 	}
 	
