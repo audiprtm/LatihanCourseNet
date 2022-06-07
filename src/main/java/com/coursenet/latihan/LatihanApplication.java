@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 //Test comment
 // Test commit lagi
+//test
 public class LatihanApplication {
 
 	public static void main(String[] args) {
