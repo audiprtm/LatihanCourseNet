@@ -28,7 +28,7 @@ public class Paket {
 	
 	@CreationTimestamp
 	private LocalDateTime createdAt;
-	
+	//fitur 2
 	@UpdateTimestamp
 	private LocalDateTime updatedAt;
 }
