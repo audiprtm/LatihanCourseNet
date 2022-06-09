@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //Test comment
 // Test commit lagi
 //test
+//lagi ngoding fitur
 public class LatihanApplication {
 
 	public static void main(String[] args) {
