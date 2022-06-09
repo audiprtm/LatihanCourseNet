@@ -5,10 +5,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class PaketRequestDTO {
 	private String namaPaket;
+
+	public String getNamaPaket() {
+		return namaPaket;
+	}
+
+	public void setNamaPaket(String namaPaket) {
+		this.namaPaket = namaPaket;
+	}
+	
 }
