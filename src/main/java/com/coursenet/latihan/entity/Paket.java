@@ -17,7 +17,6 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 public class Paket {
-	//id, namaBarang, createAt,updatedAt
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
