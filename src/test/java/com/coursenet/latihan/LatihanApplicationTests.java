@@ -20,6 +20,9 @@ class LatihanApplicationTests {
 	@Autowired
 	private ShipperInterface sicepat;
 	
+	@Autowired
+	private ShipperInterface gojek;
+	
 	
 	@Test
 	void contextLoads() {
@@ -27,7 +30,7 @@ class LatihanApplicationTests {
 		
 		Paket paket = new Paket();
 		paket.setNamaBarang("Meja Belajar");
-		paket.setShipperId(2);
+		paket.setShipperId(3);
 		
 		ShipperInterface shipper = null;
 		shipper = mappingShipper(paket);
@@ -43,6 +46,8 @@ class LatihanApplicationTests {
 			return anteraja;
 		}else if(paket.getShipperId()==2) {
 			return sicepat;
+		}else if(paket.getShipperId()==3) {
+			return gojek;
 		}
 		
 		return null;
