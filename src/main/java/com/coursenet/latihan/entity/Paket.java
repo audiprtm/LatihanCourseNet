@@ -16,8 +16,6 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
 public class Paket {
 	//id, namaBarang, createAt,updatedAt
 	@Id
@@ -32,4 +30,38 @@ public class Paket {
 	//fitur 2
 	@UpdateTimestamp
 	private LocalDateTime updatedAt;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getNamaBarang() {
+		return namaBarang;
+	}
+
+	public void setNamaBarang(String namaBarang) {
+		this.namaBarang = namaBarang;
+	}
+
+	public LocalDateTime getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(LocalDateTime createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public LocalDateTime getUpdatedAt() {
+		return updatedAt;
+	}
+
+	public void setUpdatedAt(LocalDateTime updatedAt) {
+		this.updatedAt = updatedAt;
+	}
+	
+	
 }
