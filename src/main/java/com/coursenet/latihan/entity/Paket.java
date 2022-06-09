@@ -22,12 +22,11 @@ public class Paket {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	//lagi ngoding fitur
 	private String namaBarang;
 	
 	@CreationTimestamp
 	private LocalDateTime createdAt;
-	//fitur 2
+
 	@UpdateTimestamp
 	private LocalDateTime updatedAt;
 
