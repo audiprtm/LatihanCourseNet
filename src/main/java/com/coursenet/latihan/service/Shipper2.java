@@ -2,7 +2,7 @@ package com.coursenet.latihan.service;
 
 import com.coursenet.latihan.domain.Paket;
 
-public class Shipper {
+public class Shipper2 {
 	private int flagKirim;
 	protected String namaShipper;
 	
