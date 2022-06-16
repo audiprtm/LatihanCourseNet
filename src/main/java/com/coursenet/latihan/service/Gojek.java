@@ -3,7 +3,7 @@ package com.coursenet.latihan.service;
 import org.springframework.stereotype.Service;
 
 @Service
-public class Gojek extends Shipper implements ShipperInterface {
+public class Gojek extends Shipper2 implements ShipperInterface {
 	public Gojek() {
 		namaShipper = "Gojek";
 	}
