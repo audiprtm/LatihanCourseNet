@@ -1,15 +1,19 @@
 package com.coursenet.latihan.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class PaketResponseDTO {
 	private long id;
 	private String namaBarang;
+	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getNamaBarang() {
+		return namaBarang;
+	}
+	public void setNamaBarang(String namaBarang) {
+		this.namaBarang = namaBarang;
+	}
 }

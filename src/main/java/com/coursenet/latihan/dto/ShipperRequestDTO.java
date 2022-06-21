@@ -1,13 +1,25 @@
 package com.coursenet.latihan.dto;
 
-import org.springframework.lang.NonNull;
+import javax.validation.constraints.NotNull;
+
+import com.coursenet.latihan.enums.ShipperStatus;
 
 public class ShipperRequestDTO {
 	private long id;
 	
-	@NonNull
+	@NotNull
 	private String name;
 	
+	@NotNull
+	private ShipperStatus status;
+	
+	
+	public ShipperStatus getStatus() {
+		return status;
+	}
+	public void setStatus(ShipperStatus status) {
+		this.status = status;
+	}
 	public long getId() {
 		return id;
 	}
