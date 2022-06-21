@@ -132,4 +132,17 @@ public class ShipperService {
 		return new ResponseEntity<>(shipperResponseDTO, HttpStatus.NO_CONTENT);
 	}
 
+
+	public ResponseEntity<List<ShipperResponseDTO>> getShippersActive() {
+		List<Shipper> shippers = shipperRepository.getAllShipperActive();
+		List<ShipperResponseDTO> responseDTOs = new ArrayList<>();
+		
+		for(int i=0;i<shippers.size();i++) {
+			ShipperResponseDTO responseDTO = new ShipperResponseDTO(shippers.get(i));
+			responseDTOs.add(responseDTO);
+		}
+		
+		return new ResponseEntity<>(responseDTOs, HttpStatus.OK);
+	}
+
 }
