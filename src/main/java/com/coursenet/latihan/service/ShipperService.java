@@ -7,6 +7,7 @@ import java.util.Optional;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -22,8 +23,14 @@ public class ShipperService {
 	@Autowired
 	private ShipperRepository shipperRepository;
 	
+	@Value("${static.token}")
+	private String staticToken;
 	
-	public ResponseEntity<ShipperResponseDTO> createShipper(ShipperRequestDTO shipperRequestDTO) {
+	public ResponseEntity<ShipperResponseDTO> createShipper(String token, ShipperRequestDTO shipperRequestDTO) {
+		if(token !=null && !token.equalsIgnoreCase(staticToken)) {
+			return new ResponseEntity<>(new ShipperResponseDTO(), HttpStatus.UNAUTHORIZED);
+		}
+		
 		ShipperResponseDTO shipperResponseDTO;
 		
 		if(shipperRequestDTO.getName()==null || shipperRequestDTO.getName().isEmpty()) {
@@ -34,7 +41,7 @@ public class ShipperService {
 		
 		Shipper shipper = new Shipper();
 		shipper.setName(shipperRequestDTO.getName());
-		
+		shipper.setStatus(shipperRequestDTO.getStatus());		
 		shipperRepository.save(shipper);
 		
 		//Untuk build JSON response ke client
