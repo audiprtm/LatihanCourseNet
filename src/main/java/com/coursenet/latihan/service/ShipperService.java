@@ -26,11 +26,7 @@ public class ShipperService {
 	@Value("${static.token}")
 	private String staticToken;
 	
-	public ResponseEntity<ShipperResponseDTO> createShipper(String token, ShipperRequestDTO shipperRequestDTO) {
-		if(token !=null && !token.equalsIgnoreCase(staticToken)) {
-			return new ResponseEntity<>(new ShipperResponseDTO(), HttpStatus.UNAUTHORIZED);
-		}
-		
+	public ResponseEntity<ShipperResponseDTO> createShipper(ShipperRequestDTO shipperRequestDTO) {		
 		ShipperResponseDTO shipperResponseDTO;
 		
 		if(shipperRequestDTO.getName()==null || shipperRequestDTO.getName().isEmpty()) {

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.coursenet.latihan.dto.UserLoginResponseDTO;
@@ -27,5 +28,10 @@ public class UserController {
 	@PostMapping("/users/login")
 	public ResponseEntity<UserLoginResponseDTO> userLogin(@Valid @RequestBody UserRequestDTO userRequestDTO) {
 		return userService.userLogin(userRequestDTO);
+	}
+	
+	@PostMapping("/users/refresh-token")
+	public ResponseEntity<UserLoginResponseDTO> refreshLogin(@RequestHeader("Authorization") String token) {
+		return userService.refreshToken(token);
 	}
 }

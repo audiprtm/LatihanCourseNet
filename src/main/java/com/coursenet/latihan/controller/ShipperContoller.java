@@ -6,7 +6,6 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,9 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.coursenet.latihan.dto.ShipperResponseDTO;
-import com.coursenet.latihan.entity.Shipper;
 import com.coursenet.latihan.enums.ShipperStatus;
-import com.coursenet.latihan.repository.ShipperRepository;
 import com.coursenet.latihan.service.ShipperService;
 import com.coursenet.latihan.dto.ShipperRequestDTO;
 
@@ -36,10 +33,9 @@ public class ShipperContoller {
 	// POST
 	@PostMapping("/shippers")
 	public ResponseEntity<ShipperResponseDTO> createShipper(
-			@RequestHeader(name="X-Application-Token")String token,
 			@Valid @RequestBody ShipperRequestDTO shipperRequestDTO
 			) {
-		return shipperService.createShipper(token,shipperRequestDTO);
+		return shipperService.createShipper(shipperRequestDTO);
 	}
 
 	// GET
