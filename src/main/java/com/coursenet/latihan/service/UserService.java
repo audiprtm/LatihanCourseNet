@@ -104,7 +104,7 @@ public class UserService {
 			DecodedJWT decodedJWT = jwtUtil.decodeJWTToken(token);
 			
 			if (decodedJWT.getClaim("type").asString().equalsIgnoreCase(TokenType.REFRESH.toString())) {
-				String access_token = jwtUtil.generateJWTToken(decodedJWT.getSubject(), TokenType.REFRESH);
+				String access_token = jwtUtil.generateJWTToken(decodedJWT.getSubject(), TokenType.ACCESS);
 				String refresh_token = token.replace("Bearer ", "");
 				
 				loginResponseDTO.setAccess_token(access_token);
